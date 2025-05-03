@@ -24,6 +24,13 @@ type Up struct {
 	LoadAver []float64 // current load average
 }
 
+func (up Up) String() string {
+	s1 := strconv.FormatFloat(up.LoadAver[0], 'f', -1, 64)
+	s2 := strconv.FormatFloat(up.LoadAver[1], 'f', -1, 64)
+	s3 := strconv.FormatFloat(up.LoadAver[2], 'f', -1, 64)
+	return up.CurTime + " " + up.User + " " + up.Label + " " + s1 + ", " + s2 + ", " + s3
+}
+
 func Uptime() (ut Up, err error) {
 	path, err := exec.LookPath("uptime")
 	if err != nil {
