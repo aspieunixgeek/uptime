@@ -10,17 +10,16 @@ import (
 )
 
 const (
-	CurTime  int = 0
-	User         = 1
-	Hours        = 2
-	Min          = 3
-	LoadAver     = 4
+	CurTime int = 0
+	User        = 1
+	Hours       = 2
+	Min         = 3
 )
 
 type Up struct {
-	CurTime  time.Time // the current time
-	Up       string    // the system’s uptime
-	User     string    // the number of logged-in users
+	CurTime  time.Time // current time
+	Up       string    // system’s uptime
+	User     string    // number of logged-in users
 	LoadAver []float64 // current load average
 }
 
