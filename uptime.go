@@ -17,7 +17,7 @@ const (
 )
 
 type Up struct {
-	CurTime  time.Time // current time
+	CurTime  string    // current time
 	Up       string    // system’s uptime
 	User     string    // number of logged-in users
 	LoadAver []float64 // current load average
@@ -47,7 +47,7 @@ func Uptime() (ut Up, err error) {
 		os.Exit(11)
 	}
 
-	ut.CurTime = curTime
+	ut.CurTime = curTime.Format("15:04:05")
 	ut.Up = x[Hours] + " " + x[Min]
 	ut.User = ss[User]
 

@@ -12,7 +12,7 @@ func TestUptime(t *testing.T) {
 		t.Errorf("Uptime: %v\n", err)
 	}
 
-	if u.CurTime.Format("15:04:05") != time.Now().Format("15:04:05") {
+	if u.CurTime != time.Now().Format("15:04:05") {
 		t.Fatalf("u.CurTime(%s) != time.Now(%s)", u.CurTime, now)
 	}
 	if len(u.Up) == 0 {
