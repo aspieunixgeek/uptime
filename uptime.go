@@ -20,6 +20,7 @@ type Up struct {
 	CurTime  string    // current time
 	Up       string    // system’s uptime
 	User     string    // number of logged-in users
+	Label    string    // load average label
 	LoadAver []float64 // current load average
 }
 
@@ -62,6 +63,7 @@ func Uptime() (ut Up, err error) {
 	v2, err := strconv.ParseFloat(la2, 64)
 	v3, err := strconv.ParseFloat(la3, 64)
 
+	ut.Label = " load average: "
 	ut.LoadAver = append(ut.LoadAver, v1, v2, v3)
 
 	return
