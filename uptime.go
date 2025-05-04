@@ -1,4 +1,4 @@
-// Go-uptime returns a named structure field containing the current time, system uptime, and load average
+// Go-uptime returns a named structure, containing the current time, system uptime, and load average
 
 package uptime
 
