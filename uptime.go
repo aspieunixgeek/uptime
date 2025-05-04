@@ -52,7 +52,7 @@ func Uptime() (ut Up, err error) {
 	curTime, err := time.Parse("15:04:05", x[CurTime])
 	if err != nil {
 		fmt.Printf("time.Parse: %v\n", err)
-		os.Exit(11)
+		os.Exit(1)
 	}
 
 	ut.CurTime = curTime.Format("15:04:05")
