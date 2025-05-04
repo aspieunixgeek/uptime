@@ -1,4 +1,3 @@
 #### go-uptime
 
-go-uptime prints the current time, the system’s uptime, the number of logged-in users and the current load average.
-
+Go-uptime returns a named structure, containing the current time, system uptime, and load average.
