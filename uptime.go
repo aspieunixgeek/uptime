@@ -56,8 +56,8 @@ func Uptime() (ut Up, err error) {
 	}
 
 	ut.CurTime = curTime.Format("15:04:05")
-	ut.Up = "up " + x[Hours] + " " + x[Min]
-	ut.User = ss[User]
+	ut.Up = "up " + x[Hours] + " " + x[Min] + ","
+	ut.User = ss[User] + ","
 
 	trd := strings.TrimSpace(ss[2])
 	v := strings.Split(trd, " ")
