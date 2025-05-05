@@ -22,4 +22,13 @@ func TestUptime(t *testing.T) {
 	if len(u.LoadAver) == 0 {
 		t.Fatal("len(u.LoadAver) == 0\n")
 	}
+
+	curTime := u.CurTime     // current time
+	up := u.Up               // uptime
+	loadAverLabel := u.Label // load average label
+	loadAver := u.LoadAver   // load average
+
+	t.Logf("curTime: %v\n", curTime)
+	t.Logf("uptime: %v\n", up)
+	t.Logf("%v %v\n", loadAverLabel, loadAver)
 }
