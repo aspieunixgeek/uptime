@@ -28,7 +28,7 @@ func TestUptime(t *testing.T) {
 	loadAverLabel := u.Label // load average label
 	loadAver := u.LoadAver   // load average
 
-	t.Logf("curTime: %v\n", curTime)
-	t.Logf("uptime: %v\n", up)
+	t.Logf("%v\n", curTime)
+	t.Logf("%v\n", up)
 	t.Logf("%v %v\n", loadAverLabel, loadAver)
 }
