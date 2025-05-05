@@ -9,7 +9,7 @@ Usage example:
 Install dependencies:
 ```bash
 $ go get github.com/aspieunixgeek/uptime
-go: downloading github.com/aspieunixgeek/uptime v0.2.3
+go: downloading github.com/aspieunixgeek/uptime v0.2.8
 ```
 
 ---
